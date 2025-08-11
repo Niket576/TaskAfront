@@ -36,10 +36,14 @@ const OtpVerification = () => {
       phone,
     };
     await axios
-      .post("http://localhost:4000/api/v1/user/otp-verification", data, {
-        withCredentials: true,
-        headers: { "Content-Type": "application/json" },
-      })
+      .post(
+        "https://taskaback-vdxy.onrender.com/api/v1/user/otp-verification",
+        data,
+        {
+          withCredentials: true,
+          headers: { "Content-Type": "application/json" },
+        }
+      )
       .then((res) => {
         toast.success(res.data.message);
         setIsAuthenticated(true);
