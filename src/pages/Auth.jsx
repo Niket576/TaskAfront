@@ -26,7 +26,7 @@ const Auth = () => {
               className={`toggle-btn ${!isLogin ? "active" : ""}`}
               onClick={() => setIsLogin(false)}
             >
-              RegisterVuto
+              Register
             </button>
           </div>
           {isLogin ? <Login /> : <Register />}
